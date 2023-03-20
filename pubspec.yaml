@@ -37,10 +37,14 @@ flutter:
   assets:
     - assets/svg/
 
-  # fonts:
-  #   - family: Roboto
-  #     fonts:
-  #       - asset: assets/fonts/roboto/Roboto-Regular.ttf
-  #         weight: 400
-  #       - asset: assets/fonts/roboto/Roboto-Bold.ttf
-  #         weight: 700
+  fonts:
+    - family: SFUIDisplay
+      fonts:
+        - asset: assets/fonts/SFUIDisplay/SFUIDisplay-Light.ttf
+          weight: 300
+        - asset: assets/fonts/SFUIDisplay/SFUIDisplay-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/SFUIDisplay/SFUIDisplay-Medium.ttf
+          weight: 400
+        - asset: assets/fonts/SFUIDisplay/SFUIDisplay-Bold.ttf
+          weight: 700
