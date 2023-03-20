@@ -1,0 +1,46 @@
+name: alfateam
+description: A new Flutter project.
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.19.4 <3.0.0'
+dependencies:
+  flutter:
+    sdk: flutter
+
+
+
+  cupertino_icons: ^1.0.2
+
+  dio: ^5.0.2
+  get_it: ^7.2.0
+  retrofit: ^4.0.1
+  flutter_bloc: ^8.1.2
+  equatable: ^2.0.5
+  shared_preferences: ^2.0.18
+
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  retrofit_generator: ^6.0.0+1
+  build_runner: ^2.3.3
+  flutter_lints: ^2.0.0
+
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/svg/
+
+  # fonts:
+  #   - family: Roboto
+  #     fonts:
+  #       - asset: assets/fonts/roboto/Roboto-Regular.ttf
+  #         weight: 400
+  #       - asset: assets/fonts/roboto/Roboto-Bold.ttf
+  #         weight: 700
