@@ -39,9 +39,9 @@ class MyApp extends StatelessWidget {
           title: kMaterialAppTitle,
           // navigatorKey: navigatorKey,
           onGenerateRoute: AppRoutes.onGenerateRoutes,
-          initialRoute: '/',
+          initialRoute: '/auth',
           onUnknownRoute: AppRoutes.onUnkownRoute,
-          theme: AppTheme.tmtrade,
+          theme: AppTheme.appTheme,
           builder: (BuildContext context, Widget? child) {
             final textScaleFactor =
                 MediaQuery.of(context).textScaleFactor.clamp(1.0, 1.1);
