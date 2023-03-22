@@ -35,4 +35,12 @@ class AppText {
   static const String homeRatingHaveQuest = 'Есть идея';
   static const String homeRatingBad = 'Меня расстроило ';
   static const String homeRatingConcurent = 'Как там у конкурентов';
+
+  //DISCUSSION PAGE
+  static const String discussion = 'Дискуссия';
+  static const String comments = 'Комментариев';
+  static const String thanksForDetailedComment = 'баллов вознаграждение за подробный комментарий';
+  static const String thanksForAnswer = 'баллов начислено. Спасибо за ответ';
+  static const String write = 'Написать';
+  
 }

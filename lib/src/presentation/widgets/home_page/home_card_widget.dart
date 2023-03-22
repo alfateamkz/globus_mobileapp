@@ -73,12 +73,7 @@ class HomeCardWidget extends StatelessWidget {
             child: InkWell(
                 borderRadius: BorderRadius.circular(10),
                 onTap: () {
-                  // Navigator.push(
-                  //     context,
-                  //     MaterialPageRoute(
-                  //         builder: (context) => ComapanyDetailPage(
-                  //               id: company.id,
-                  //             )));
+                  Navigator.pushNamed(context, '/discussion');
                 }),
           ),
         ],
