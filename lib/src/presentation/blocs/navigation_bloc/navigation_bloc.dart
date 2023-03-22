@@ -18,11 +18,13 @@ class NavigationBloc extends Bloc<NavigationEvent, NavigationState> {
       emit(HomePageLoaded());
     }
     if (currentIndex == 1) {
-      emit(SecondPageLoaded());
+      emit(ChatPageLoaded());
     }
     if (currentIndex == 2) {
-   
-      emit(ThirdPageLoaded());
+      emit(NotificationPageLoaded());
+    }
+    if (currentIndex == 2) {
+      emit(ProfilePageLoaded());
     }
   }
 

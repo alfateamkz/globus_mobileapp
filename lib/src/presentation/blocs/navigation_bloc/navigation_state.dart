@@ -26,13 +26,16 @@ class HomePageLoaded extends NavigationState {
   String toString() => 'HomePageLoaded';
 }
 
-class SecondPageLoaded extends NavigationState {
+class ChatPageLoaded extends NavigationState {
   @override
   String toString() => 'CompanyPageLoaded';
 }
 
-class ThirdPageLoaded extends NavigationState {
+class NotificationPageLoaded extends NavigationState {
   @override
   String toString() => 'ProductPageLoaded';
 }
-
+class ProfilePageLoaded extends NavigationState {
+  @override
+  String toString() => 'ProfilePageLoaded';
+}

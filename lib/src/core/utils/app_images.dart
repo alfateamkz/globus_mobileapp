@@ -18,6 +18,7 @@ class AppImages {
   static const String file = 'assets/svg/file.svg';
   static const String likeHeart= 'assets/svg/like_heart.svg';
   static const String like= 'assets/svg/like.svg';
+  static const String idea = 'assets/svg/idea.svg';
   static const String lock= 'assets/svg/lock.svg';
   static const String mail= 'assets/svg/mail.svg';
   static const String message= 'assets/svg/message.svg';
@@ -33,4 +34,18 @@ class AppImages {
   static const String starGreen= 'assets/svg/star_green.svg';
   static const String vk= 'assets/svg/vk.svg';
   static const String yandex= 'assets/svg/yandex.svg';
+
+
+
+  static const String avatar1 = 'assets/png/avatar1.png';
+  static const String avatar2= 'assets/png/avatar2.png';
+  static const String avatar3= 'assets/png/avatar3.png';
+  static const String post1= 'assets/png/post1.png';
+  static const String post2= 'assets/png/post2.png';
+  static const String post3= 'assets/png/post3.png';
+  static const String post4= 'assets/png/post4.png';
+  static const String home1= 'assets/png/home1.png';
+  static const String home2= 'assets/png/home2.png';
+  static const String home3= 'assets/png/home3.png';
+  static const String home4= 'assets/png/home4.png';
 }

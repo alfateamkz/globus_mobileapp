@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class SecondPage extends StatelessWidget {
-  const SecondPage({super.key});
+class ProfilePage extends StatelessWidget {
+  const ProfilePage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return const Center(
-      child: Text('Second Page'),
+      child: Text('Third Page'),
     );
   }
 }

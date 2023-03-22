@@ -32,6 +32,8 @@ flutter:
 
   assets:
     - assets/svg/
+    - assets/fonts/
+    - assets/png/
 
   fonts:
     - family: SFUIDisplay

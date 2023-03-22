@@ -1,11 +1,16 @@
 import 'dart:async';
 import 'package:alfateam/src/core/utils/app_colors.dart';
+import 'package:alfateam/src/core/utils/app_images.dart';
+import 'package:alfateam/src/core/utils/app_text.dart';
 import 'package:alfateam/src/presentation/blocs/navigation_bloc/navigation_bloc.dart';
 import 'package:alfateam/src/presentation/views/home_page.dart';
-import 'package:alfateam/src/presentation/views/second_page.dart';
-import 'package:alfateam/src/presentation/views/third_page.dart';
+import 'package:alfateam/src/presentation/views/chat_page.dart';
+import 'package:alfateam/src/presentation/views/notification_page.dart';
+import 'package:alfateam/src/presentation/views/profile_page.dart';
+import 'package:alfateam/src/presentation/widgets/home_page/home_page_appbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class NavigationPage extends StatefulWidget {
@@ -29,22 +34,25 @@ class _NavigationPageState extends State<NavigationPage> {
     return Scaffold(
         backgroundColor: AppColors.bodyBg,
         appBar: PreferredSize(
-          preferredSize: const Size.fromHeight(80),
+          preferredSize: const Size.fromHeight(60),
           child: BlocBuilder<NavigationBloc, NavigationState>(
             builder: (context, state) {
               if (state is HomePageLoaded) {
-                return AppBar(
-                  title: Text('home page'),
-                );
+                return const HomePageAppBar();
               }
-              if (state is SecondPageLoaded) {
+              if (state is ChatPageLoaded) {
                 return AppBar(
                   title: Text('second page'),
                 );
               }
-              if (state is ThirdPageLoaded) {
+              if (state is NotificationPageLoaded) {
                 return AppBar(
                   title: Text('thrid page'),
+                );
+              }
+              if (state is ProfilePageLoaded) {
+                return AppBar(
+                  title: Text('profile page'),
                 );
               }
               return Container();
@@ -56,28 +64,77 @@ class _NavigationPageState extends State<NavigationPage> {
             if (state is HomePageLoaded) {
               return const HomePage();
             }
-            if (state is SecondPageLoaded) {
-              return const SecondPage();
+            if (state is ChatPageLoaded) {
+              return const ChatPage();
             }
-            if (state is ThirdPageLoaded) {
-              return const ThirdPage();
+            if (state is NotificationPageLoaded) {
+              return const NotificationPage();
+            }
+            if (state is ProfilePageLoaded) {
+              return AppBar(
+                title: const ProfilePage(),
+              );
             }
             return Container();
           },
         ),
-        bottomNavigationBar: BottomNavigationBar(
-            currentIndex: activeIndex,
-            onTap: (value) {
-              setState(() {
-                activeIndex = value;
-              });
-              context.read<NavigationBloc>().add(PageTapped(index: value));
-            },
-            items: const [
-              BottomNavigationBarItem(icon: Icon(Icons.home), label: ''),
-              BottomNavigationBarItem(
-                  icon: Icon(Icons.download_for_offline_rounded), label: ''),
-              BottomNavigationBarItem(icon: Icon(Icons.analytics), label: ''),
-            ]));
+        bottomNavigationBar: Container(
+          height: 80,
+          decoration: BoxDecoration(
+              border: Border(
+                  top: BorderSide(color: AppColors.mainGrey, width: 0.5))),
+          child: BottomNavigationBar(
+              type: BottomNavigationBarType.fixed,
+              backgroundColor: AppColors.bottomBarColor,
+              currentIndex: activeIndex,
+              elevation: 0,
+              selectedItemColor: AppColors.mainOrange,
+              selectedLabelStyle: TextStyle(
+                  color: AppColors.mainOrange, fontSize: 11, height: 2),
+              unselectedLabelStyle:
+                  TextStyle(color: AppColors.mainGrey, fontSize: 11),
+              showSelectedLabels: true,
+              showUnselectedLabels: true,
+              onTap: (value) {
+                setState(() {
+                  activeIndex = value;
+                });
+                context.read<NavigationBloc>().add(PageTapped(index: value));
+              },
+              items: [
+                BottomNavigationBarItem(
+                    icon: SvgPicture.asset(AppImages.navbarHome),
+                    activeIcon: SvgPicture.asset(
+                      AppImages.navbarHome,
+                      colorFilter: ColorFilter.mode(
+                          AppColors.mainOrange, BlendMode.srcIn),
+                    ),
+                    label: AppText.navHome),
+                BottomNavigationBarItem(
+                    icon: SvgPicture.asset(AppImages.navbarChat),
+                    activeIcon: SvgPicture.asset(
+                      AppImages.navbarChat,
+                      colorFilter: ColorFilter.mode(
+                          AppColors.mainOrange, BlendMode.srcIn),
+                    ),
+                    label: AppText.navChat),
+                BottomNavigationBarItem(
+                    icon: SvgPicture.asset(AppImages.navbarAlert),
+                    activeIcon: SvgPicture.asset(
+                      AppImages.navbarAlert,
+                      colorFilter: ColorFilter.mode(
+                          AppColors.mainOrange, BlendMode.srcIn),
+                    ),
+                    label: AppText.navNotification),
+                BottomNavigationBarItem(
+                    icon: SvgPicture.asset(AppImages.navbarUser),
+                    activeIcon: SvgPicture.asset(
+                      AppImages.navbarUser,
+                      colorFilter: ColorFilter.mode(
+                          AppColors.mainOrange, BlendMode.srcIn),
+                    ),
+                    label: AppText.navProfile),
+              ]),
+        ));
   }
 }

@@ -7,4 +7,5 @@ abstract class AppColors {
   static const mainGrey = Color(0xFFB2B2B2);
   static const textGrey = Color(0xFF6D6D77);
   static const textBlack = Color(0xFF34343A);
+  static const bottomBarColor = Color(0xFFF7F9FD);
 }
