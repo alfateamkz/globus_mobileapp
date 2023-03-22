@@ -23,7 +23,7 @@ class NavigationBloc extends Bloc<NavigationEvent, NavigationState> {
     if (currentIndex == 2) {
       emit(NotificationPageLoaded());
     }
-    if (currentIndex == 2) {
+    if (currentIndex == 3) {
       emit(ProfilePageLoaded());
     }
   }

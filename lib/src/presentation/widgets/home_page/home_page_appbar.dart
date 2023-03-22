@@ -1,4 +1,5 @@
 import 'package:alfateam/src/core/utils/app_images.dart';
+import 'package:alfateam/src/core/utils/app_styles.dart';
 import 'package:alfateam/src/core/utils/app_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -11,8 +12,7 @@ class HomePageAppBar extends StatelessWidget {
     return AppBar(
       title: const Text(
         AppText.homeAppBarTitle,
-        style: TextStyle(
-            color: Colors.white, fontWeight: FontWeight.w700, fontSize: 16),
+        style: AppBarTextStyle.appBarTitleTextStyle,
       ),
       elevation: 0,
       centerTitle: true,

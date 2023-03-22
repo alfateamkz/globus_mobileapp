@@ -43,4 +43,12 @@ class AppText {
   static const String thanksForAnswer = 'баллов начислено. Спасибо за ответ';
   static const String write = 'Написать';
   
+
+  //CHAT PAGE
+  static const String appBarChatTitle = 'Чаты';
+  static const String appBarRoomTitle = 'Чат';
+
+
+  //NOTIFICATION
+  static const String appBarNotification = 'Уведомления';
 }

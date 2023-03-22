@@ -28,12 +28,12 @@ class HomePageLoaded extends NavigationState {
 
 class ChatPageLoaded extends NavigationState {
   @override
-  String toString() => 'CompanyPageLoaded';
+  String toString() => 'ChatPageLoaded';
 }
 
 class NotificationPageLoaded extends NavigationState {
   @override
-  String toString() => 'ProductPageLoaded';
+  String toString() => 'NotificationPageLoaded';
 }
 class ProfilePageLoaded extends NavigationState {
   @override
