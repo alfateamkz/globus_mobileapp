@@ -13,20 +13,24 @@ class ProfilePage extends StatelessWidget {
       children: [
         const ProfilePageUserCardWidget(),
         Row(
-          children: const [
+          children: [
             Expanded(
               child: ProfilePageCardWidget(
+                onTap: () {
+                  Navigator.pushNamed(context, '/pointInfo');
+                },
                 icon: AppImages.starCircle,
                 title: '383',
                 topTitle: 'баллы',
                 iconColor: AppColors.mainOrange,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               width: 12,
             ),
             Expanded(
               child: ProfilePageCardWidget(
+                onTap: () {},
                 icon: AppImages.money,
                 title: '1000 р',
                 topTitle: 'деньги',
@@ -35,35 +39,47 @@ class ProfilePage extends StatelessWidget {
             )
           ],
         ),
-        const ProfilePageCardWidget(
+        ProfilePageCardWidget(
+          onTap: () {
+            Navigator.pushNamed(context, '/pointInfo');
+          },
           icon: AppImages.achievement,
           topTitle: 'статус',
           title: 'Эксперт',
           iconColor: AppColors.mainOrange,
           additionalText: '137 баллов \nдо следующего уровня',
         ),
-        const ProfilePageCardWidget(
+        ProfilePageCardWidget(
+          onTap: () {
+            Navigator.pushNamed(context, '/privacy');
+          },
           icon: AppImages.blank,
           title: 'Правила участия в сообществе',
         ),
-        const ProfilePageCardWidget(
+        ProfilePageCardWidget(
+          onTap: () {
+            Navigator.pushNamed(context, '/privacy');
+          },
           icon: AppImages.blank,
           title: 'Пользовательское соглашение',
         ),
         Row(
-          children: const [
+          children: [
             Expanded(
               child: ProfilePageCardWidget(
+                onTap: () {
+                  Navigator.pushNamed(context, '/resetPass');
+                },
                 icon: AppImages.lock,
                 titleColor: AppColors.mainOrange,
                 title: 'Изменить пароль',
                 iconColor: AppColors.mainOrange,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               width: 12,
             ),
-            Expanded(
+            const Expanded(
               child: ProfilePageCardWidget(
                 icon: AppImages.exit,
                 titleColor: AppColors.mainOrange,

@@ -2,10 +2,17 @@ import 'package:alfateam/src/presentation/views/auth_page.dart';
 import 'package:alfateam/src/presentation/views/chat_page.dart';
 import 'package:alfateam/src/presentation/views/discussion_page.dart';
 import 'package:alfateam/src/presentation/views/navigation_page.dart';
+import 'package:alfateam/src/presentation/views/new_idea_page.dart';
 import 'package:alfateam/src/presentation/views/profile_page.dart';
+import 'package:alfateam/src/presentation/views/quiz_page.dart';
+import 'package:alfateam/src/presentation/views/voting_page.dart';
 import 'package:alfateam/src/presentation/widgets/auth_page/register_page.dart';
 import 'package:alfateam/src/presentation/widgets/chat_page/room_page.dart';
 import 'package:alfateam/src/presentation/widgets/profile_page/personal_info_page.dart';
+import 'package:alfateam/src/presentation/widgets/profile_page/profile_point_info_page.dart';
+import 'package:alfateam/src/presentation/widgets/profile_page/profile_point_progress_page.dart';
+import 'package:alfateam/src/presentation/widgets/profile_page/profile_privacy_page.dart';
+import 'package:alfateam/src/presentation/widgets/profile_page/profile_reset_pass_page.dart';
 import 'package:flutter/material.dart';
 
 class AppRoutes {
@@ -27,6 +34,20 @@ class AppRoutes {
         return _materialRoute(const ProfilePage());
       case '/personalInfo':
         return _materialRoute(const PersonalInfoPage());
+      case '/pointInfo':
+        return _materialRoute(const ProfilePointInfoPage());
+      case '/pointProgress':
+        return _materialRoute(const ProfilePointProgressPage());
+      case '/resetPass':
+        return _materialRoute(const ProfileResetPassPage());
+      case '/privacy':
+        return _materialRoute(const ProfilePrivacyPage());
+      case '/quiz':
+        return _materialRoute(const QuizPage());
+      case '/voting':
+        return _materialRoute(const VotingPage());
+      case '/newIdea':
+        return _materialRoute(const NewIdeaPage());
       default:
         return _materialRoute(const NavigationPage());
     }
