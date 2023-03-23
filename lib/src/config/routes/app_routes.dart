@@ -2,8 +2,10 @@ import 'package:alfateam/src/presentation/views/auth_page.dart';
 import 'package:alfateam/src/presentation/views/chat_page.dart';
 import 'package:alfateam/src/presentation/views/discussion_page.dart';
 import 'package:alfateam/src/presentation/views/navigation_page.dart';
+import 'package:alfateam/src/presentation/views/profile_page.dart';
 import 'package:alfateam/src/presentation/widgets/auth_page/register_page.dart';
 import 'package:alfateam/src/presentation/widgets/chat_page/room_page.dart';
+import 'package:alfateam/src/presentation/widgets/profile_page/personal_info_page.dart';
 import 'package:flutter/material.dart';
 
 class AppRoutes {
@@ -21,6 +23,10 @@ class AppRoutes {
         return _materialRoute(const ChatPage());
       case '/roomPage':
         return _materialRoute(const RoomPage());
+      case '/profile':
+        return _materialRoute(const ProfilePage());
+      case '/personalInfo':
+        return _materialRoute(const PersonalInfoPage());
       default:
         return _materialRoute(const NavigationPage());
     }

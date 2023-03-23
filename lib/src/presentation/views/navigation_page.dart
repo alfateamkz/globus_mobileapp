@@ -10,6 +10,7 @@ import 'package:alfateam/src/presentation/views/profile_page.dart';
 import 'package:alfateam/src/presentation/widgets/chat_page/chat_page_appbar.dart';
 import 'package:alfateam/src/presentation/widgets/home_page/home_page_appbar.dart';
 import 'package:alfateam/src/presentation/widgets/notification_page/notification_appbar.dart';
+import 'package:alfateam/src/presentation/widgets/profile_page/profile_page_appbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
@@ -49,9 +50,7 @@ class _NavigationPageState extends State<NavigationPage> {
                 return const NotificationPageAppBar();
               }
               if (state is ProfilePageLoaded) {
-                return AppBar(
-                  title: Text('profile page'),
-                );
+                return const ProfilePageAppBar();
               }
               return Container();
             },
