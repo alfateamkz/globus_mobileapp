@@ -1,7 +1,7 @@
-import 'package:alfateam/src/core/utils/app_colors.dart';
-import 'package:alfateam/src/core/utils/app_images.dart';
-import 'package:alfateam/src/core/utils/app_styles.dart';
-import 'package:alfateam/src/presentation/widgets/components/app_button.dart';
+import 'package:globus/src/core/utils/app_colors.dart';
+import 'package:globus/src/core/utils/app_images.dart';
+import 'package:globus/src/core/utils/app_styles.dart';
+import 'package:globus/src/presentation/widgets/components/app_button.dart';
 import 'package:flutter/material.dart';
 
 class QuizPage extends StatelessWidget {
@@ -20,9 +20,9 @@ class QuizPage extends StatelessWidget {
         centerTitle: true,
       ),
       body: SingleChildScrollView(
-        padding: EdgeInsets.fromLTRB(17, 21, 17, 0),
+        padding: const EdgeInsets.fromLTRB(17, 21, 17, 0),
         child: Container(
-          padding: EdgeInsets.fromLTRB(19, 27, 19, 44),
+          padding: const EdgeInsets.fromLTRB(19, 27, 19, 44),
           decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(16),
@@ -36,28 +36,28 @@ class QuizPage extends StatelessWidget {
               ]),
           child: Column(
             children: [
-              Text(
+              const Text(
                 'Насколько удобно вам покупать товары на маркетплейсах?',
                 style: TextStyle(
                     fontWeight: FontWeight.w700,
                     color: AppColors.textBlack,
                     fontSize: 17),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 17,
               ),
-              Text(
+              const Text(
                 'Lorem ipsum dolor sit amet consectetur adipiscmg elit ornare tortor',
                 style: TextStyle(
                     fontWeight: FontWeight.w300,
                     color: AppColors.textGrey,
                     fontSize: 15),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 22,
               ),
               Image.asset(AppImages.post1),
-              SizedBox(
+              const SizedBox(
                 height: 22,
               ),
               Row(
@@ -65,7 +65,7 @@ class QuizPage extends StatelessWidget {
                 children: [
                   for (var i in quizLength)
                     Container(
-                      margin: EdgeInsets.only(left: 11),
+                      margin: const EdgeInsets.only(left: 11),
                       width: 52,
                       alignment: Alignment.center,
                       height: 52,
@@ -84,20 +84,20 @@ class QuizPage extends StatelessWidget {
                     ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 32,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
+                children: const [
+                   Text(
                     'Не удобный',
                     style: TextStyle(
                         color: AppColors.textBlack,
                         fontSize: 12,
                         fontWeight: FontWeight.w700),
                   ),
-                  Text(
+                   Text(
                     'Очень удобно',
                     style: TextStyle(
                         color: AppColors.textBlack,
@@ -106,7 +106,7 @@ class QuizPage extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 32,
               ),
               AppOrangeButtonWidget(

@@ -1,6 +1,6 @@
-import 'package:alfateam/src/core/utils/app_colors.dart';
-import 'package:alfateam/src/core/utils/app_images.dart';
-import 'package:alfateam/src/presentation/widgets/profile_page/profile_page_widgets.dart';
+import 'package:globus/src/core/utils/app_colors.dart';
+import 'package:globus/src/core/utils/app_images.dart';
+import 'package:globus/src/presentation/widgets/profile_page/profile_page_widgets.dart';
 import 'package:flutter/material.dart';
 
 class ProfilePage extends StatelessWidget {

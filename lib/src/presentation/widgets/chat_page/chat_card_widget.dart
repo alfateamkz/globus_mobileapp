@@ -1,5 +1,4 @@
-import 'package:alfateam/src/core/utils/app_colors.dart';
-import 'package:alfateam/src/core/utils/app_images.dart';
+import 'package:globus/src/core/utils/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class ChatCardEntity {
@@ -21,7 +20,7 @@ class ChatCardWidget extends StatelessWidget {
         Navigator.pushNamed(context, '/roomPage');
       },
       // dense: true,
-      contentPadding: EdgeInsets.only(left: 18, right: 18),
+      contentPadding: const EdgeInsets.only(left: 18, right: 18),
       style: ListTileStyle.drawer,
       horizontalTitleGap: 12,
 
@@ -44,7 +43,7 @@ class ChatCardWidget extends StatelessWidget {
           ),
           Text(
             card.text,
-            style: TextStyle(color: AppColors.mainGrey, fontSize: 16),
+            style: const TextStyle(color: AppColors.mainGrey, fontSize: 16),
           ),
           const SizedBox(
             height: 8,

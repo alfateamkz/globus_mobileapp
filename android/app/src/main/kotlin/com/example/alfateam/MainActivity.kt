@@ -1,4 +1,4 @@
-package com.example.alfateam
+package com.example.globus
 
 import io.flutter.embedding.android.FlutterActivity
 

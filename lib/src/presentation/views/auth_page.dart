@@ -1,4 +1,4 @@
-import 'package:alfateam/src/presentation/widgets/auth_page/auth_page_widget.dart';
+import 'package:globus/src/presentation/widgets/auth_page/auth_page_widget.dart';
 import 'package:flutter/material.dart';
 
 class AuthPage extends StatelessWidget {

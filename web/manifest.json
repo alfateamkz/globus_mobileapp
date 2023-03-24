@@ -1,6 +1,6 @@
 {
-    "name": "alfateam",
-    "short_name": "alfateam",
+    "name": "globus",
+    "short_name": "globus",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

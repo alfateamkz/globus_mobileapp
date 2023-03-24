@@ -1,18 +1,18 @@
-import 'package:alfateam/src/presentation/views/auth_page.dart';
-import 'package:alfateam/src/presentation/views/chat_page.dart';
-import 'package:alfateam/src/presentation/views/discussion_page.dart';
-import 'package:alfateam/src/presentation/views/navigation_page.dart';
-import 'package:alfateam/src/presentation/views/new_idea_page.dart';
-import 'package:alfateam/src/presentation/views/profile_page.dart';
-import 'package:alfateam/src/presentation/views/quiz_page.dart';
-import 'package:alfateam/src/presentation/views/voting_page.dart';
-import 'package:alfateam/src/presentation/widgets/auth_page/register_page.dart';
-import 'package:alfateam/src/presentation/widgets/chat_page/room_page.dart';
-import 'package:alfateam/src/presentation/widgets/profile_page/personal_info_page.dart';
-import 'package:alfateam/src/presentation/widgets/profile_page/profile_point_info_page.dart';
-import 'package:alfateam/src/presentation/widgets/profile_page/profile_point_progress_page.dart';
-import 'package:alfateam/src/presentation/widgets/profile_page/profile_privacy_page.dart';
-import 'package:alfateam/src/presentation/widgets/profile_page/profile_reset_pass_page.dart';
+import 'package:globus/src/presentation/views/auth_page.dart';
+import 'package:globus/src/presentation/views/chat_page.dart';
+import 'package:globus/src/presentation/views/discussion_page.dart';
+import 'package:globus/src/presentation/views/navigation_page.dart';
+import 'package:globus/src/presentation/views/new_idea_page.dart';
+import 'package:globus/src/presentation/views/profile_page.dart';
+import 'package:globus/src/presentation/views/quiz_page.dart';
+import 'package:globus/src/presentation/views/voting_page.dart';
+import 'package:globus/src/presentation/widgets/auth_page/register_page.dart';
+import 'package:globus/src/presentation/widgets/chat_page/room_page.dart';
+import 'package:globus/src/presentation/widgets/profile_page/personal_info_page.dart';
+import 'package:globus/src/presentation/widgets/profile_page/profile_point_info_page.dart';
+import 'package:globus/src/presentation/widgets/profile_page/profile_point_progress_page.dart';
+import 'package:globus/src/presentation/widgets/profile_page/profile_privacy_page.dart';
+import 'package:globus/src/presentation/widgets/profile_page/profile_reset_pass_page.dart';
 import 'package:flutter/material.dart';
 
 class AppRoutes {

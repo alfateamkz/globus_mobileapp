@@ -1,4 +1,4 @@
-import 'package:alfateam/src/presentation/blocs/navigation_bloc/navigation_bloc.dart';
+import 'package:globus/src/presentation/blocs/navigation_bloc/navigation_bloc.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class BlocProviders {

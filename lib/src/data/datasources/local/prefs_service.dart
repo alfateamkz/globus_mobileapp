@@ -1,4 +1,4 @@
-import 'package:alfateam/src/core/utils/enums.dart';
+import 'package:globus/src/core/utils/enums.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class PrefsService {

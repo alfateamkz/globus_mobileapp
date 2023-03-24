@@ -1,7 +1,6 @@
-import 'package:alfateam/src/core/utils/app_colors.dart';
-import 'package:alfateam/src/core/utils/app_images.dart';
-import 'package:alfateam/src/presentation/widgets/components/open_image.dart';
-import 'package:alfateam/src/presentation/widgets/components/preview_image_widget.dart';
+import 'package:globus/src/core/utils/app_colors.dart';
+import 'package:globus/src/core/utils/app_images.dart';
+import 'package:globus/src/presentation/widgets/components/preview_image_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -59,7 +58,7 @@ class MessageCardWidget extends StatelessWidget {
                     Text(
                       card.name,
                       style:
-                          TextStyle(color: AppColors.mainOrange, fontSize: 13),
+                       const   TextStyle(color: AppColors.mainOrange, fontSize: 13),
                     ),
                   ],
                 ),
@@ -68,7 +67,7 @@ class MessageCardWidget extends StatelessWidget {
                 ),
                 Text(
                   card.text,
-                  style: TextStyle(color: AppColors.textBlack, fontSize: 15),
+                  style: const TextStyle(color: AppColors.textBlack, fontSize: 15),
                 ),
                 const SizedBox(
                   height: 4,

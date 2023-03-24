@@ -1,10 +1,9 @@
-import 'package:alfateam/src/core/utils/app_colors.dart';
-import 'package:alfateam/src/core/utils/app_images.dart';
-import 'package:alfateam/src/core/utils/app_styles.dart';
-import 'package:alfateam/src/core/utils/app_text.dart';
-import 'package:alfateam/src/presentation/widgets/components/app_button.dart';
-import 'package:alfateam/src/presentation/widgets/discussion_page/discussion_bonus_card_widget.dart';
-import 'package:alfateam/src/presentation/widgets/discussion_page/discussion_card_widget.dart';
+import 'package:globus/src/core/utils/app_images.dart';
+import 'package:globus/src/core/utils/app_styles.dart';
+import 'package:globus/src/core/utils/app_text.dart';
+import 'package:globus/src/presentation/widgets/components/app_button.dart';
+import 'package:globus/src/presentation/widgets/discussion_page/discussion_bonus_card_widget.dart';
+import 'package:globus/src/presentation/widgets/discussion_page/discussion_card_widget.dart';
 import 'package:flutter/material.dart';
 
 List<DiscussionCardEntity> _card = [
@@ -43,7 +42,7 @@ class DiscussionPage extends StatelessWidget {
             style: AppBarTextStyle.appBarTitleTextStyle),
       ),
       body: ListView(
-        padding: EdgeInsets.fromLTRB(13, 12, 13, 0),
+        padding: const EdgeInsets.fromLTRB(13, 12, 13, 0),
         children: [
           DiscussionCardWidget(card: _card[0], withPostImg: true),
           const DiscussionBonusCardWidget(

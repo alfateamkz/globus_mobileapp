@@ -1,6 +1,6 @@
-import 'package:alfateam/src/core/utils/app_colors.dart';
-import 'package:alfateam/src/core/utils/app_images.dart';
-import 'package:alfateam/src/presentation/widgets/chat_page/chat_card_widget.dart';
+import 'package:globus/src/core/utils/app_colors.dart';
+import 'package:globus/src/core/utils/app_images.dart';
+import 'package:globus/src/presentation/widgets/chat_page/chat_card_widget.dart';
 import 'package:flutter/material.dart';
 
 List<ChatCardEntity> _card = [

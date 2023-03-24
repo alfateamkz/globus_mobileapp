@@ -1,5 +1,5 @@
-import 'package:alfateam/src/core/utils/app_colors.dart';
-import 'package:alfateam/src/core/utils/app_images.dart';
+import 'package:globus/src/core/utils/app_colors.dart';
+import 'package:globus/src/core/utils/app_images.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -17,7 +17,7 @@ class NotificationCardWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(bottom: 12),
+      margin: const EdgeInsets.only(bottom: 12),
       decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(18),
@@ -31,19 +31,19 @@ class NotificationCardWidget extends StatelessWidget {
           ]),
       child: ListTile(
           style: ListTileStyle.drawer,
-          contentPadding: EdgeInsets.fromLTRB(23, 18, 17, 16),
+          contentPadding: const EdgeInsets.fromLTRB(23, 18, 17, 16),
           horizontalTitleGap: 0,
           leading: (card.isLike)
               ? SvgPicture.asset(
                   AppImages.likeHeart,
                   colorFilter:
-                      ColorFilter.mode(AppColors.mainOrange, BlendMode.srcIn),
+                      const ColorFilter.mode(AppColors.mainOrange, BlendMode.srcIn),
                 )
               : SvgPicture.asset(AppImages.comment),
           title: Text(card.text,
               style: const TextStyle(color: AppColors.textBlack, fontSize: 15)),
-          subtitle: Text('18 июня 2022',
-              style: const TextStyle(color: AppColors.textGrey, fontSize: 13))),
+          subtitle: const Text('18 июня 2022',
+              style: TextStyle(color: AppColors.textGrey, fontSize: 13))),
     );
   }
 }

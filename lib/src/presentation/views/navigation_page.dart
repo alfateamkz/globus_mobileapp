@@ -1,20 +1,18 @@
-import 'dart:async';
-import 'package:alfateam/src/core/utils/app_colors.dart';
-import 'package:alfateam/src/core/utils/app_images.dart';
-import 'package:alfateam/src/core/utils/app_text.dart';
-import 'package:alfateam/src/presentation/blocs/navigation_bloc/navigation_bloc.dart';
-import 'package:alfateam/src/presentation/views/home_page.dart';
-import 'package:alfateam/src/presentation/views/chat_page.dart';
-import 'package:alfateam/src/presentation/views/notification_page.dart';
-import 'package:alfateam/src/presentation/views/profile_page.dart';
-import 'package:alfateam/src/presentation/widgets/chat_page/chat_page_appbar.dart';
-import 'package:alfateam/src/presentation/widgets/home_page/home_page_appbar.dart';
-import 'package:alfateam/src/presentation/widgets/notification_page/notification_appbar.dart';
-import 'package:alfateam/src/presentation/widgets/profile_page/profile_page_appbar.dart';
+import 'package:globus/src/core/utils/app_colors.dart';
+import 'package:globus/src/core/utils/app_images.dart';
+import 'package:globus/src/core/utils/app_text.dart';
+import 'package:globus/src/presentation/blocs/navigation_bloc/navigation_bloc.dart';
+import 'package:globus/src/presentation/views/home_page.dart';
+import 'package:globus/src/presentation/views/chat_page.dart';
+import 'package:globus/src/presentation/views/notification_page.dart';
+import 'package:globus/src/presentation/views/profile_page.dart';
+import 'package:globus/src/presentation/widgets/chat_page/chat_page_appbar.dart';
+import 'package:globus/src/presentation/widgets/home_page/home_page_appbar.dart';
+import 'package:globus/src/presentation/widgets/notification_page/notification_appbar.dart';
+import 'package:globus/src/presentation/widgets/profile_page/profile_page_appbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 class NavigationPage extends StatefulWidget {
   const NavigationPage({
@@ -75,7 +73,7 @@ class _NavigationPageState extends State<NavigationPage> {
         ),
         bottomNavigationBar: Container(
           height: 80,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
               border: Border(
                   top: BorderSide(color: AppColors.mainGrey, width: 0.5))),
           child: BottomNavigationBar(
@@ -84,10 +82,10 @@ class _NavigationPageState extends State<NavigationPage> {
               currentIndex: activeIndex,
               elevation: 0,
               selectedItemColor: AppColors.mainOrange,
-              selectedLabelStyle: TextStyle(
+              selectedLabelStyle: const TextStyle(
                   color: AppColors.mainOrange, fontSize: 11, height: 2),
               unselectedLabelStyle:
-                  TextStyle(color: AppColors.mainGrey, fontSize: 11),
+                  const TextStyle(color: AppColors.mainGrey, fontSize: 11),
               showSelectedLabels: true,
               showUnselectedLabels: true,
               onTap: (value) {
@@ -101,7 +99,7 @@ class _NavigationPageState extends State<NavigationPage> {
                     icon: SvgPicture.asset(AppImages.navbarHome),
                     activeIcon: SvgPicture.asset(
                       AppImages.navbarHome,
-                      colorFilter: ColorFilter.mode(
+                      colorFilter: const ColorFilter.mode(
                           AppColors.mainOrange, BlendMode.srcIn),
                     ),
                     label: AppText.navHome),
@@ -109,7 +107,7 @@ class _NavigationPageState extends State<NavigationPage> {
                     icon: SvgPicture.asset(AppImages.navbarChat),
                     activeIcon: SvgPicture.asset(
                       AppImages.navbarChat,
-                      colorFilter: ColorFilter.mode(
+                      colorFilter: const ColorFilter.mode(
                           AppColors.mainOrange, BlendMode.srcIn),
                     ),
                     label: AppText.navChat),
@@ -117,7 +115,7 @@ class _NavigationPageState extends State<NavigationPage> {
                     icon: SvgPicture.asset(AppImages.navbarAlert),
                     activeIcon: SvgPicture.asset(
                       AppImages.navbarAlert,
-                      colorFilter: ColorFilter.mode(
+                      colorFilter: const ColorFilter.mode(
                           AppColors.mainOrange, BlendMode.srcIn),
                     ),
                     label: AppText.navNotification),
@@ -125,7 +123,7 @@ class _NavigationPageState extends State<NavigationPage> {
                     icon: SvgPicture.asset(AppImages.navbarUser),
                     activeIcon: SvgPicture.asset(
                       AppImages.navbarUser,
-                      colorFilter: ColorFilter.mode(
+                      colorFilter: const ColorFilter.mode(
                           AppColors.mainOrange, BlendMode.srcIn),
                     ),
                     label: AppText.navProfile),

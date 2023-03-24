@@ -1,11 +1,12 @@
-import 'package:alfateam/src/core/utils/app_colors.dart';
+import 'package:globus/src/core/utils/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class RegisterPageTextField extends StatelessWidget {
   final String icon;
   final String text;
-  const RegisterPageTextField({super.key, required this.icon, required this.text});
+  const RegisterPageTextField(
+      {super.key, required this.icon, required this.text});
 
   @override
   Widget build(BuildContext context) {

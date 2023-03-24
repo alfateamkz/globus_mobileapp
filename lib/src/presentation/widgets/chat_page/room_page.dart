@@ -1,8 +1,8 @@
-import 'package:alfateam/src/core/utils/app_colors.dart';
-import 'package:alfateam/src/core/utils/app_images.dart';
-import 'package:alfateam/src/core/utils/app_styles.dart';
-import 'package:alfateam/src/core/utils/app_text.dart';
-import 'package:alfateam/src/presentation/widgets/chat_page/message_card_widget.dart';
+import 'package:globus/src/core/utils/app_colors.dart';
+import 'package:globus/src/core/utils/app_images.dart';
+import 'package:globus/src/core/utils/app_styles.dart';
+import 'package:globus/src/core/utils/app_text.dart';
+import 'package:globus/src/presentation/widgets/chat_page/message_card_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -91,7 +91,7 @@ class RoomPage extends StatelessWidget {
           centerTitle: true,
         ),
         body: ListView.builder(
-            padding: EdgeInsets.fromLTRB(18, 19, 18, 75),
+            padding:const EdgeInsets.fromLTRB(18, 19, 18, 75),
             itemCount: _card.length,
             itemBuilder: (_, i) {
               return MessageCardWidget(card: _card[i]);

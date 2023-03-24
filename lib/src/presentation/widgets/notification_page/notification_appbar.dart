@@ -1,5 +1,5 @@
-import 'package:alfateam/src/core/utils/app_styles.dart';
-import 'package:alfateam/src/core/utils/app_text.dart';
+import 'package:globus/src/core/utils/app_styles.dart';
+import 'package:globus/src/core/utils/app_text.dart';
 import 'package:flutter/material.dart';
 
 class NotificationPageAppBar extends StatelessWidget {
@@ -10,7 +10,7 @@ class NotificationPageAppBar extends StatelessWidget {
     return AppBar(
       title: const Text(
         AppText.appBarNotification,
-        style:AppBarTextStyle.appBarTitleTextStyle,
+        style: AppBarTextStyle.appBarTitleTextStyle,
       ),
       elevation: 0,
       centerTitle: true,

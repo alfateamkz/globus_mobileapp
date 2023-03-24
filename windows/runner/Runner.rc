@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.example" "\0"
-            VALUE "FileDescription", "alfateam" "\0"
+            VALUE "FileDescription", "globus" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "alfateam" "\0"
+            VALUE "InternalName", "globus" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2023 com.example. All rights reserved." "\0"
-            VALUE "OriginalFilename", "alfateam.exe" "\0"
-            VALUE "ProductName", "alfateam" "\0"
+            VALUE "OriginalFilename", "globus.exe" "\0"
+            VALUE "ProductName", "globus" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

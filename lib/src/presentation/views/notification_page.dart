@@ -1,4 +1,4 @@
-import 'package:alfateam/src/presentation/widgets/notification_page/notification_card_widget.dart';
+import 'package:globus/src/presentation/widgets/notification_page/notification_card_widget.dart';
 import 'package:flutter/material.dart';
 
 List<NotificationCardEntity> _card = [

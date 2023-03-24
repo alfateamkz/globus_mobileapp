@@ -1,5 +1,5 @@
-import 'package:alfateam/src/core/utils/app_colors.dart';
-import 'package:alfateam/src/core/utils/app_styles.dart';
+import 'package:globus/src/core/utils/app_colors.dart';
+import 'package:globus/src/core/utils/app_styles.dart';
 import 'package:flutter/material.dart';
 
 import '../../../core/utils/app_images.dart';
@@ -78,7 +78,7 @@ class ProfileResetPassPage extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(
+             const SizedBox(
                 height: 10,
               ),
               Container(

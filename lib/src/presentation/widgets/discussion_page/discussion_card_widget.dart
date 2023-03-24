@@ -1,8 +1,7 @@
-import 'package:alfateam/src/core/utils/app_colors.dart';
-import 'package:alfateam/src/core/utils/app_images.dart';
-import 'package:alfateam/src/core/utils/app_text.dart';
-import 'package:alfateam/src/presentation/widgets/components/open_image.dart';
-import 'package:alfateam/src/presentation/widgets/components/preview_image_widget.dart';
+import 'package:globus/src/core/utils/app_colors.dart';
+import 'package:globus/src/core/utils/app_images.dart';
+import 'package:globus/src/core/utils/app_text.dart';
+import 'package:globus/src/presentation/widgets/components/preview_image_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -42,7 +41,7 @@ class DiscussionCardWidget extends StatelessWidget {
                 offset: const Offset(0, 4),
               ),
             ]),
-        padding: EdgeInsets.fromLTRB(18, 18, 12, 21),
+        padding: const EdgeInsets.fromLTRB(18, 18, 12, 21),
         child: Column(
           children: [
             ListTile(

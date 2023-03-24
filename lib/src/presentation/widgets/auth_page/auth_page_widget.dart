@@ -1,7 +1,7 @@
-import 'package:alfateam/src/core/utils/app_colors.dart';
-import 'package:alfateam/src/core/utils/app_images.dart';
-import 'package:alfateam/src/core/utils/app_text.dart';
-import 'package:alfateam/src/presentation/widgets/auth_page/widgets/auth_page_button_widget.dart';
+import 'package:globus/src/core/utils/app_colors.dart';
+import 'package:globus/src/core/utils/app_images.dart';
+import 'package:globus/src/core/utils/app_text.dart';
+import 'package:globus/src/presentation/widgets/auth_page/widgets/auth_page_button_widget.dart';
 import 'package:flutter/material.dart';
 
 class AuthPageWidget extends StatelessWidget {

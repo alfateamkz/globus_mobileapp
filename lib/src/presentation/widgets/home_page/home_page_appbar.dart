@@ -1,6 +1,6 @@
-import 'package:alfateam/src/core/utils/app_images.dart';
-import 'package:alfateam/src/core/utils/app_styles.dart';
-import 'package:alfateam/src/core/utils/app_text.dart';
+import 'package:globus/src/core/utils/app_images.dart';
+import 'package:globus/src/core/utils/app_styles.dart';
+import 'package:globus/src/core/utils/app_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 

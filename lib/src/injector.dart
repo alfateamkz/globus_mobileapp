@@ -1,5 +1,4 @@
-import 'package:alfateam/src/data/datasources/local/prefs_service.dart';
-import 'package:alfateam/src/data/datasources/remote/api_service.dart';
+import 'package:globus/src/data/datasources/remote/api_service.dart';
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
 

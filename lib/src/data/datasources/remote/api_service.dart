@@ -1,4 +1,4 @@
-import 'package:alfateam/src/core/utils/app_constants.dart';
+import 'package:globus/src/core/utils/app_constants.dart';
 import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
 

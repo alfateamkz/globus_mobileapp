@@ -1,6 +1,6 @@
-import 'package:alfateam/src/core/utils/app_images.dart';
-import 'package:alfateam/src/presentation/widgets/home_page/home_card_widget.dart';
-import 'package:alfateam/src/presentation/widgets/home_page/home_rating_widget.dart';
+import 'package:globus/src/core/utils/app_images.dart';
+import 'package:globus/src/presentation/widgets/home_page/home_card_widget.dart';
+import 'package:globus/src/presentation/widgets/home_page/home_rating_widget.dart';
 import 'package:flutter/material.dart';
 
 final List<List> homeCard = [
@@ -35,7 +35,7 @@ class HomePage extends StatelessWidget {
               padding: const EdgeInsets.only(bottom: 10),
               child: HomeCardWidget(item: e)))
         ]),
-        HomeRatingWidget(),
+       const HomeRatingWidget(),
       ],
     );
   }

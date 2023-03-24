@@ -1,6 +1,6 @@
-import 'package:alfateam/src/core/utils/app_colors.dart';
-import 'package:alfateam/src/core/utils/app_styles.dart';
-import 'package:alfateam/src/presentation/widgets/components/app_button.dart';
+import 'package:globus/src/core/utils/app_colors.dart';
+import 'package:globus/src/core/utils/app_styles.dart';
+import 'package:globus/src/presentation/widgets/components/app_button.dart';
 import 'package:flutter/material.dart';
 
 class NewIdeaPage extends StatelessWidget {
@@ -18,9 +18,9 @@ class NewIdeaPage extends StatelessWidget {
         centerTitle: true,
       ),
       body: SingleChildScrollView(
-        padding: EdgeInsets.fromLTRB(14, 57, 14, 0),
+        padding: const EdgeInsets.fromLTRB(14, 57, 14, 0),
         child: Container(
-          padding: EdgeInsets.fromLTRB(19, 19, 19, 44),
+          padding: const EdgeInsets.fromLTRB(19, 19, 19, 44),
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(16),
               color: Colors.white,
@@ -35,37 +35,37 @@ class NewIdeaPage extends StatelessWidget {
           child: Column(
             mainAxisSize: MainAxisSize.max,
             children: [
-              Text(
+              const Text(
                   'Напишите ваши идеи и мы обязательно постараемся их воплотить',
                   style: TextStyle(fontSize: 15, color: AppColors.textGrey)),
-              SizedBox(
+              const SizedBox(
                 height: 22,
               ),
               TextField(
                 decoration: InputDecoration(
                   border: OutlineInputBorder(
-                      borderSide: BorderSide(color: AppColors.mainGrey),
+                      borderSide: const BorderSide(color: AppColors.mainGrey),
                       borderRadius: BorderRadius.circular(12)),
                   hintText: "Заголовок",
                   hintStyle:
                       const TextStyle(fontSize: 15, color: AppColors.mainGrey),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 22,
               ),
               TextField(
                 maxLines: 7,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(
-                      borderSide: BorderSide(color: AppColors.mainGrey),
+                      borderSide: const BorderSide(color: AppColors.mainGrey),
                       borderRadius: BorderRadius.circular(12)),
                   hintText: "Подробное описание",
                   hintStyle:
                       const TextStyle(fontSize: 15, color: AppColors.mainGrey),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 31,
               ),
               AppOrangeButtonWidget(

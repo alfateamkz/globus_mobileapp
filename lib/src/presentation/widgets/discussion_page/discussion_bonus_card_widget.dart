@@ -1,6 +1,6 @@
-import 'package:alfateam/src/core/utils/app_colors.dart';
-import 'package:alfateam/src/core/utils/app_images.dart';
-import 'package:alfateam/src/core/utils/app_text.dart';
+import 'package:globus/src/core/utils/app_colors.dart';
+import 'package:globus/src/core/utils/app_images.dart';
+import 'package:globus/src/core/utils/app_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -17,7 +17,7 @@ class DiscussionBonusCardWidget extends StatelessWidget {
       borderRadius: BorderRadius.circular(14),
       child: Container(
         height: 46,
-        padding: EdgeInsets.fromLTRB(11, 6, 21, 6),
+        padding: const EdgeInsets.fromLTRB(11, 6, 21, 6),
         // margin: EdgeInsets.only(top: 6, bottom: 6),
         color: Colors.white,
         child: Row(

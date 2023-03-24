@@ -1,8 +1,7 @@
-import 'package:alfateam/src/core/utils/app_colors.dart';
-import 'package:alfateam/src/core/utils/app_images.dart';
-import 'package:alfateam/src/core/utils/app_styles.dart';
-import 'package:alfateam/src/core/utils/app_text.dart';
-import 'package:alfateam/src/presentation/widgets/components/app_button.dart';
+import 'package:globus/src/core/utils/app_colors.dart';
+import 'package:globus/src/core/utils/app_images.dart';
+import 'package:globus/src/core/utils/app_styles.dart';
+import 'package:globus/src/presentation/widgets/components/app_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -337,7 +336,7 @@ class PersonalInfoListWidget extends StatelessWidget {
                 leftText: 'Город',
                 rightText: 'Москва',
               ),
-              SizedBox(
+             const SizedBox(
                 height: 12,
               ),
             ],

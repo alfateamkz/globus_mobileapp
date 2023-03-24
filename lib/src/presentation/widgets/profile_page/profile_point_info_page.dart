@@ -1,9 +1,7 @@
-import 'package:alfateam/src/core/utils/app_colors.dart';
-import 'package:alfateam/src/core/utils/app_images.dart';
-import 'package:alfateam/src/core/utils/app_styles.dart';
-import 'package:alfateam/src/presentation/widgets/profile_page/components/profile_point_person_card_widget.dart';
+import 'package:globus/src/core/utils/app_colors.dart';
+import 'package:globus/src/core/utils/app_styles.dart';
+import 'package:globus/src/presentation/widgets/profile_page/components/profile_point_person_card_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 class ProfilePointInfoPage extends StatelessWidget {
   const ProfilePointInfoPage({super.key});
@@ -115,7 +113,7 @@ class ProfilePointCardWidget extends StatelessWidget {
                 ),
                 Text(
                   subtTitle,
-                  style: TextStyle(color: AppColors.textGrey),
+                  style: const TextStyle(color: AppColors.textGrey),
                 ),
                 const SizedBox(
                   height: 8,
@@ -141,4 +139,3 @@ class ProfilePointCardWidget extends StatelessWidget {
     );
   }
 }
-

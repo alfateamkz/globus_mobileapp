@@ -1,5 +1,4 @@
-import 'package:alfateam/src/core/utils/app_colors.dart';
-import 'package:alfateam/src/core/utils/app_images.dart';
+import 'package:globus/src/core/utils/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class HomeCardWidget extends StatelessWidget {
@@ -7,7 +6,6 @@ class HomeCardWidget extends StatelessWidget {
   const HomeCardWidget({Key? key, required this.item}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    print(item);
     return SizedBox(
       height: 90,
       child: Stack(

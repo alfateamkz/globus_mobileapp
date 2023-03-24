@@ -1,7 +1,7 @@
-import 'package:alfateam/src/core/utils/app_colors.dart';
-import 'package:alfateam/src/core/utils/app_images.dart';
-import 'package:alfateam/src/core/utils/app_styles.dart';
-import 'package:alfateam/src/presentation/widgets/components/app_button.dart';
+import 'package:globus/src/core/utils/app_colors.dart';
+import 'package:globus/src/core/utils/app_images.dart';
+import 'package:globus/src/core/utils/app_styles.dart';
+import 'package:globus/src/presentation/widgets/components/app_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -20,7 +20,7 @@ class VotingPage extends StatelessWidget {
         centerTitle: true,
       ),
       body: SingleChildScrollView(
-        padding: EdgeInsets.fromLTRB(15, 26, 15, 0),
+        padding: const EdgeInsets.fromLTRB(15, 26, 15, 0),
         child: Column(
           children: [
             const Text(
@@ -80,7 +80,7 @@ class VotingCardWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.fromLTRB(21, 11, 21, 11),
+      padding: const EdgeInsets.fromLTRB(21, 11, 21, 11),
       decoration: BoxDecoration(
           color: Colors.white,
           boxShadow: [
@@ -114,9 +114,9 @@ class VotingCardWidget extends StatelessWidget {
                     const SizedBox(
                       width: 9,
                     ),
-                    Text(
+                    const Text(
                       "23 Комментария",
-                      style: const TextStyle(
+                      style: TextStyle(
                           color: AppColors.textBlack,
                           fontWeight: FontWeight.w300,
                           fontSize: 15),
@@ -131,7 +131,7 @@ class VotingCardWidget extends StatelessWidget {
               SvgPicture.asset(
                 AppImages.like,
                 colorFilter: (isLiked == true)
-                    ? ColorFilter.mode(AppColors.mainOrange, BlendMode.srcIn)
+                    ? const ColorFilter.mode(AppColors.mainOrange, BlendMode.srcIn)
                     : null,
               ),
               const SizedBox(
@@ -140,8 +140,8 @@ class VotingCardWidget extends StatelessWidget {
               Text(
                 '16 голосов',
                 style: (isLiked == true)
-                    ? TextStyle(color: AppColors.mainOrange)
-                    : TextStyle(color: AppColors.textBlack),
+                    ? const TextStyle(color: AppColors.mainOrange)
+                    : const TextStyle(color: AppColors.textBlack),
               )
             ],
           )

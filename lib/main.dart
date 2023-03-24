@@ -1,9 +1,7 @@
-import 'dart:io';
-import 'package:alfateam/src/presentation/views/navigation_page.dart';
+import 'package:globus/src/presentation/views/navigation_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import 'src/config/themes/app_themes.dart';
 import 'src/core/utils/app_constants.dart';
 import 'src/injector.dart';

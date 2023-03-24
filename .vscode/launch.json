@@ -5,18 +5,18 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "alfateam",
+            "name": "globus",
             "request": "launch",
             "type": "dart"
         },
         {
-            "name": "alfateam (profile mode)",
+            "name": "globus (profile mode)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "profile"
         },
         {
-            "name": "alfateam (release mode)",
+            "name": "globus (release mode)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "release"

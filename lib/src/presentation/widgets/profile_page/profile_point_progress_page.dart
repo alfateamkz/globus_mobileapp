@@ -1,10 +1,8 @@
-import 'package:alfateam/src/core/utils/app_colors.dart';
-import 'package:alfateam/src/core/utils/app_images.dart';
-import 'package:alfateam/src/core/utils/app_styles.dart';
-import 'package:alfateam/src/presentation/widgets/profile_page/components/another_stepper_widget.dart';
-import 'package:alfateam/src/presentation/widgets/profile_page/components/profile_point_person_card_widget.dart';
+import 'package:globus/src/core/utils/app_colors.dart';
+import 'package:globus/src/core/utils/app_styles.dart';
+import 'package:globus/src/presentation/widgets/profile_page/components/another_stepper_widget.dart';
+import 'package:globus/src/presentation/widgets/profile_page/components/profile_point_person_card_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 class ProfilePointProgressPage extends StatelessWidget {
   const ProfilePointProgressPage({super.key});
@@ -55,7 +53,7 @@ class ProfilePointProgressPage extends StatelessWidget {
                             style: TextStyle(color: AppColors.mainGrey))
                       ])),
               Padding(
-                padding: EdgeInsets.fromLTRB(40, 5, 40, 0),
+                padding: const EdgeInsets.fromLTRB(40, 5, 40, 0),
                 child: AnotherStepper(
                   verticalGap: 30,
                   barThickness: 5,
