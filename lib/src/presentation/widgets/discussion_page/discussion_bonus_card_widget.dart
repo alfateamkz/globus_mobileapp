@@ -3,12 +3,12 @@ import 'package:globus/src/core/utils/app_images.dart';
 import 'package:globus/src/core/utils/app_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:globus/src/domain/models/discussion/discussion_additional.dart';
 
 class DiscussionBonusCardWidget extends StatelessWidget {
-  final String bonusCount;
-  final bool isGreen;
+  final DiscussionAdditional card;
   const DiscussionBonusCardWidget(
-      {Key? key, required this.bonusCount, required this.isGreen})
+      {Key? key, required this.card})
       : super(key: key);
 
   @override
@@ -22,32 +22,32 @@ class DiscussionBonusCardWidget extends StatelessWidget {
         color: Colors.white,
         child: Row(
           children: [
-            if (isGreen) ...[
               SvgPicture.asset(AppImages.starGreen),
               const SizedBox(
                 width: 11,
               ),
               Expanded(
                 child: Text(
-                  '$bonusCount ${AppText.thanksForDetailedComment}',
+                  '${card.text} ${AppText.thanksForDetailedComment}',
                   style: const TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.w300,
                       color: AppColors.mainGreen),
                 ),
               ),
-            ],
-            if (isGreen == false) ...[
-              SvgPicture.asset(AppImages.doneIcon),
-              const SizedBox(
-                width: 11,
-              ),
-              Text('$bonusCount ${AppText.thanksForAnswer}',
-                  style: const TextStyle(
-                      fontSize: 14,
-                      fontWeight: FontWeight.w300,
-                      color: AppColors.mainOrange)),
-            ]
+            // if (isGreen) ...[
+            // ],
+            // if (isGreen == false) ...[
+            //   SvgPicture.asset(AppImages.doneIcon),
+            //   const SizedBox(
+            //     width: 11,
+            //   ),
+            //   Text('$bonusCount ${AppText.thanksForAnswer}',
+            //       style: const TextStyle(
+            //           fontSize: 14,
+            //           fontWeight: FontWeight.w300,
+            //           color: AppColors.mainOrange)),
+            // ]
           ],
         ),
       ),

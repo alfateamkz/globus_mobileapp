@@ -1,10 +1,10 @@
+import 'package:globus/src/config/constants/app_constants.dart';
 import 'package:globus/src/presentation/views/navigation_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'src/config/themes/app_themes.dart';
-import 'src/core/utils/app_constants.dart';
-import 'src/injector.dart';
+import 'src/locator.dart';
 import 'src/config/blocs/providers.dart';
 import 'src/config/routes/app_routes.dart';
 

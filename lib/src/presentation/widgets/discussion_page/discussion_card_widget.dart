@@ -1,6 +1,7 @@
 import 'package:globus/src/core/utils/app_colors.dart';
 import 'package:globus/src/core/utils/app_images.dart';
 import 'package:globus/src/core/utils/app_text.dart';
+import 'package:globus/src/domain/models/discussion/discussion.dart';
 import 'package:globus/src/presentation/widgets/components/preview_image_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -20,13 +21,15 @@ class DiscussionCardEntity {
 }
 
 class DiscussionCardWidget extends StatelessWidget {
-  final DiscussionCardEntity card;
-  final bool? withPostImg;
-  const DiscussionCardWidget({Key? key, required this.card, this.withPostImg})
-      : super(key: key);
+  final Discussion card;
+  const DiscussionCardWidget({
+    Key? key,
+    required this.card,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    print(card.photo);
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 6),
       child: Container(
@@ -49,11 +52,12 @@ class DiscussionCardWidget extends StatelessWidget {
               leading: CircleAvatar(
                   radius: 31,
                   backgroundColor: Colors.white,
-                  child: ClipOval(
-                      child: Image.asset(
-                    card.avatar,
-                    fit: BoxFit.cover,
-                  ))),
+                  child: ClipOval(child: Text(card.title)
+                      //      Image.asset(
+                      //   card.avatar,
+                      //   fit: BoxFit.cover,
+                      // )
+                      )),
               title: Text(
                 card.title,
                 style: const TextStyle(
@@ -65,7 +69,7 @@ class DiscussionCardWidget extends StatelessWidget {
               subtitle: Padding(
                 padding: const EdgeInsets.only(top: 5),
                 child: Text(
-                  card.time,
+                  card.publishedDate ?? '',
                   style: const TextStyle(
                       color: AppColors.mainGrey,
                       fontSize: 12,
@@ -77,7 +81,7 @@ class DiscussionCardWidget extends StatelessWidget {
               height: 7,
             ),
             Text(
-              card.text,
+              card.description ?? '',
               style: const TextStyle(
                   fontWeight: FontWeight.w300,
                   fontSize: 15,
@@ -87,27 +91,27 @@ class DiscussionCardWidget extends StatelessWidget {
             const SizedBox(
               height: 11,
             ),
-            if (withPostImg == true)
-              SingleChildScrollView(
-                padding: EdgeInsets.zero,
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  children: const [
-                    PreviewImageWidget(
-                      image: AppImages.post1,
-                    ),
-                    PreviewImageWidget(
-                      image: AppImages.post2,
-                    ),
-                    PreviewImageWidget(
-                      image: AppImages.post3,
-                    ),
-                    PreviewImageWidget(
-                      image: AppImages.post4,
-                    ),
-                  ],
-                ),
-              ),
+            // if (withPostImg == true)
+            //   SingleChildScrollView(
+            //     padding: EdgeInsets.zero,
+            //     scrollDirection: Axis.horizontal,
+            //     child: Row(
+            //       children: const [
+            //         PreviewImageWidget(
+            //           image: AppImages.post1,
+            //         ),
+            //         PreviewImageWidget(
+            //           image: AppImages.post2,
+            //         ),
+            //         PreviewImageWidget(
+            //           image: AppImages.post3,
+            //         ),
+            //         PreviewImageWidget(
+            //           image: AppImages.post4,
+            //         ),
+            //       ],
+            //     ),
+            //   ),
             const SizedBox(
               height: 11,
             ),

@@ -1,11 +1,13 @@
 import 'package:globus/src/core/utils/app_colors.dart';
 import 'package:flutter/material.dart';
+import 'package:globus/src/domain/models/activity/activity.dart';
 
 class HomeCardWidget extends StatelessWidget {
-  final List item;
+  final Activity item;
   const HomeCardWidget({Key? key, required this.item}) : super(key: key);
   @override
   Widget build(BuildContext context) {
+    print(item.image.url);
     return SizedBox(
       height: 90,
       child: Stack(
@@ -24,12 +26,14 @@ class HomeCardWidget extends StatelessWidget {
                   width: 89,
                   child: ClipRRect(
                       borderRadius: BorderRadius.circular(10),
-                      child: Image.asset(
-                        item[0],
-                        fit: BoxFit.cover,
-                        width: 89,
-                        height: 90,
-                      )),
+                      child: Text('place for image')
+                      // Image.network(
+                      //   // "http://54.38.79.153:3000/${item.image.url}",
+                      //   fit: BoxFit.cover,
+                      //   width: 89,
+                      //   height: 90,
+                      // )
+                      ),
                 ),
                 const SizedBox(width: 25),
                 Expanded(
@@ -40,7 +44,7 @@ class HomeCardWidget extends StatelessWidget {
                         height: 13,
                       ),
                       Text(
-                        item[1],
+                        item.title.text,
                         maxLines: 3,
                         overflow: TextOverflow.ellipsis,
                         style: const TextStyle(
@@ -51,7 +55,7 @@ class HomeCardWidget extends StatelessWidget {
                       const SizedBox(
                         height: 7,
                       ),
-                      Text(item[2],
+                      Text(item.subtitle?.started ?? '',
                           softWrap: true,
                           maxLines: 2,
                           overflow: TextOverflow.ellipsis,

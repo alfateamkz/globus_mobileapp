@@ -14,3 +14,7 @@ class DataSuccess<T> extends DataState<T> {
 class DataFailed<T> extends DataState<T> {
   const DataFailed(DioError error) : super(error: error);
 }
+
+class DataNotSet<T> extends DataState<T> {
+  const DataNotSet();
+}

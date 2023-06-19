@@ -72,7 +72,7 @@ class _NavigationPageState extends State<NavigationPage> {
           },
         ),
         bottomNavigationBar: Container(
-          height: 80,
+          height: 95,
           decoration: const BoxDecoration(
               border: Border(
                   top: BorderSide(color: AppColors.mainGrey, width: 0.5))),

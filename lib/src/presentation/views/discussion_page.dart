@@ -1,6 +1,8 @@
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:globus/src/core/utils/app_images.dart';
 import 'package:globus/src/core/utils/app_styles.dart';
 import 'package:globus/src/core/utils/app_text.dart';
+import 'package:globus/src/presentation/blocs/discussions/discussions_bloc.dart';
 import 'package:globus/src/presentation/widgets/components/app_button.dart';
 import 'package:globus/src/presentation/widgets/discussion_page/discussion_bonus_card_widget.dart';
 import 'package:globus/src/presentation/widgets/discussion_page/discussion_card_widget.dart';
@@ -41,21 +43,52 @@ class DiscussionPage extends StatelessWidget {
         title: const Text(AppText.discussion,
             style: AppBarTextStyle.appBarTitleTextStyle),
       ),
-      body: ListView(
-        padding: const EdgeInsets.fromLTRB(13, 12, 13, 0),
-        children: [
-          DiscussionCardWidget(card: _card[0], withPostImg: true),
-          const DiscussionBonusCardWidget(
-            bonusCount: "300",
-            isGreen: true,
-          ),
-          DiscussionCardWidget(card: _card[1]),
-          const DiscussionBonusCardWidget(
-            bonusCount: "300",
-            isGreen: false,
-          ),
-          DiscussionCardWidget(card: _card[2], withPostImg: true),
-        ],
+      body: SingleChildScrollView(
+        child: BlocBuilder<DiscussionsBloc, DiscussionsState>(
+          builder: (context, state) {
+            if (state is DiscussionsLoading) {
+              return const Center(
+                child: CircularProgressIndicator(),
+              );
+            }
+            if (state is DiscussionsSuccess) {
+              return ListView.builder(
+                  itemCount: state.discussions.discussions.length,
+                  shrinkWrap: true,
+                  physics: NeverScrollableScrollPhysics(),
+                  padding: EdgeInsets.zero,
+                  itemBuilder: (BuildContext context, int index) {
+                    return Column(
+                      children: [
+                        DiscussionCardWidget(
+                            card: state.discussions.discussions[index]),
+                        DiscussionBonusCardWidget(
+                          card: state.discussions.discussions[index].additional,
+                        ),
+                      ],
+                    );
+                  });
+            } else {
+              return SizedBox();
+            }
+            // return ListView(
+            //   padding: const EdgeInsets.fromLTRB(13, 12, 13, 0),
+            //   children: [
+            //     DiscussionCardWidget(card: _card[0], withPostImg: true),
+            //     const DiscussionBonusCardWidget(
+            //       bonusCount: "300",
+            //       isGreen: true,
+            //     ),
+            //     DiscussionCardWidget(card: _card[1]),
+            //     const DiscussionBonusCardWidget(
+            //       bonusCount: "300",
+            //       isGreen: false,
+            //     ),
+            //     DiscussionCardWidget(card: _card[2], withPostImg: true),
+            //   ],
+            // );
+          },
+        ),
       ),
     );
   }
