@@ -1,6 +1,7 @@
 import 'package:globus/src/presentation/views/auth_page.dart';
 import 'package:globus/src/presentation/views/chat_page.dart';
 import 'package:globus/src/presentation/views/discussion_page.dart';
+import 'package:globus/src/presentation/views/login_page.dart';
 import 'package:globus/src/presentation/views/navigation_page.dart';
 import 'package:globus/src/presentation/views/new_idea_page.dart';
 import 'package:globus/src/presentation/views/profile_page.dart';
@@ -24,6 +25,8 @@ class AppRoutes {
         return _materialRoute(const AuthPage());
       case '/register':
         return _materialRoute(const RegisterPage());
+      case '/login':
+        return _materialRoute(const LoginPage());
       case '/discussion':
         return _materialRoute(const DiscussionPage());
       case '/chat':

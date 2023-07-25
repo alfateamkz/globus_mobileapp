@@ -5,8 +5,9 @@ import 'package:flutter_svg/flutter_svg.dart';
 class RegisterPageTextField extends StatelessWidget {
   final String icon;
   final String text;
+  final TextEditingController? controller;
   const RegisterPageTextField(
-      {super.key, required this.icon, required this.text});
+      {super.key, required this.icon, required this.text, this.controller});
 
   @override
   Widget build(BuildContext context) {
@@ -14,6 +15,7 @@ class RegisterPageTextField extends StatelessWidget {
       height: 60,
       width: 296,
       child: TextField(
+        controller: controller,
         decoration: InputDecoration(
             border: OutlineInputBorder(
                 borderSide: const BorderSide(color: AppColors.mainGrey),
